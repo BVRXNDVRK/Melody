@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background-color: #635854;
+  height: 60px;
+  border-bottom: 4px solid #3596f5;
+  display: flex;
+  align-items: center;
+}
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+
+.header-logo {
+  margin-top: 4px;
+}
+
+.header-nav {
+  height: 100%;
+}
+
+.header__menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  list-style-type: none;
+  height: 100%;
+}
+
+.header-link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 60px;
+}
+
+.header-item {
+  height: 100%;
+  padding: 0 16px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  transition: background-color 0.4s;
+  cursor: pointer;
+}
+
+.header-item:hover {
+  background-color: #3596f5;
+}
+
+.header-contacts {
+  text-align: right;
+}
+
+.header-text {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  
+}
+
+.header__text {
+  margin-bottom: 4px;
+}
+
+.header-phone {
+  font-size: 17px;
+  font-weight: 700; 
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -6,3 +6,4 @@
 - Css
 - Js
 - Normalize.css
+- БЭМ
