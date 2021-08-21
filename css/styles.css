@@ -176,3 +176,126 @@ body {
 .main__path--current {
   opacity: 1;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s, opacity 0.1s, z-index 0.01s;
+  opacity: 0;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.modal--is-open {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.modal__dialog {
+  position: relative;
+  max-width: 1000px;
+  min-height: 565px;
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  transition: transform 0.35s;
+  transform: translateY(-30px);
+}
+
+.modal__dialog--is-open {
+  transform: translateY(0);
+}
+
+.modal__dialog-image {
+  width: 60%;
+  background-color: #ebebeb;
+  text-align: center;
+  padding: 50px;
+}
+
+.modal__dialog-title {
+  font-family: Bebas;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #000000;
+}
+
+.modal__dialog-info {
+  width: 40%;
+  padding: 50px 46px;
+}
+
+.modal__flat-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 55px;
+}
+
+.modal__flat-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  text-decoration: none;
+}
+
+.modal__flat-link--current {
+  text-decoration: underline;
+  color: #3596f5;
+}
+
+.modal__flat-item {
+  margin-bottom: 10px;
+}
+
+.modal__flat-link:hover {
+  text-decoration: underline;
+  color: #3596f5;
+}
+
+.modal__alert {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  margin-top: 56px;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 38px;
+  right: 27px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.modal__path {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.modal__path:hover {
+  opacity: 1;
+}
+
+.modal__path--current {
+  opacity: 1;
+}

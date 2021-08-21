@@ -1,16 +1,42 @@
 $(document).ready(function () {
 
   // VARIABLES
-  var currentFloor = 0;
+  var currentFloor = 2;
+  var currentFlat = 0;
+  var currentFlatInfo = 0;
   const counterUp = $('.main__arrow-up');
   const counterDown = $('.main__arrow-down');
-  const imagePath = $(".main__image path");
+  const imagePath = $('.main__image path');
+  const modal = $('.modal');
+  const modalDialog = $('.modal__dialog')
+  const closeBtn = $('.modal__close-button');
+  const flatPath = $('.modal__path');
+  const flatLink = $('.modal__flat-link');
+  const floorBtn = $('.main__btn-primary');
+
 
   // HOVER
   imagePath.on('mouseover', function () {
     currentFloor = $(this).attr('data-floor');
     imagePath.removeClass('main__path--current');
     $('.main__counter').text(currentFloor);
+    $(`[data-floor=${currentFloor}]`).toggleClass('main__path--current');
+  });
+
+  flatLink.on('mouseover', function () {
+    flatLink.removeClass('modal__flat-link--current');
+    flatPath.removeClass('modal__path--current');
+    currentFlatInfo = $(this).attr('data-flatInfo');
+    $(`[data-flatInfo=${currentFlatInfo}]`).toggleClass('modal__flat-link--current');
+    $(`[data-flat=${currentFlatInfo}]`).toggleClass('modal__path--current');
+  });
+
+  flatPath.on('mouseover', function () {
+    flatLink.removeClass('modal__flat-link--current');
+    flatPath.removeClass('modal__path--current');
+    currentFlat = $(this).attr('data-flat');
+    $(`[data-flatInfo=${currentFlat}]`).toggleClass('modal__flat-link--current');
+    $(`[data-flat=${currentFlat}]`).toggleClass('modal__path--current');
   });
 
   // BUTTONS CLICK
@@ -33,4 +59,23 @@ $(document).ready(function () {
       $(`[data-floor=${usCurrentFloor}]`).toggleClass('main__path--current');
     }
   });
+
+  // OPEN & CLOSE MODAL
+  imagePath.on("click", function () {
+    modal.toggleClass('modal--is-open');
+    modalDialog.toggleClass('modal__dialog--is-open');
+    $('.modal-counter').text(currentFloor);
+  });
+
+  closeBtn.on("click", function () {
+    modal.toggleClass('modal--is-open');
+    modalDialog.toggleClass('modal__dialog--is-open');
+  });
+
+  floorBtn.on("click", function () {
+    modal.toggleClass('modal--is-open');
+    modalDialog.toggleClass('modal__dialog--is-open');
+    $('.modal-counter').text(currentFloor);
+  });
 });
+
