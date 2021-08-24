@@ -19,20 +19,29 @@
         <a class="header__logo" href="index.html">
           <img class="header-logo" src="img/logo.svg" alt="image: logo">
         </a>
-        <nav class="header-nav">
-          <ul class="header__menu header-menu">
-            <li class="header__item header-item"><a href="#" class="header-link">Подобрать<br>
-                квартиру</a></li>
-            <li class="header__item header-item"><a href="#" class="header-link">Забронировать<br>
-                квартиру</a></li>
-            <li class="header__item header-item"><a href="#" class="header-link">Ход<br>
-              строительства</a></li>
-            <li class="header__item header-item"><a href="#" class="header-link">Проектная<br>декларация</a></li>
-          </ul>
-        </nav>
-        <div class="header-contacts">
-          <span class="header-text header__text">Закажите звонок:</span>
-          <a class="header-phone" href="tel: ">8 (843) 123-45-67</a>
+
+        <button class="header-menuOpen"> МЕНЮ <img src="img/burger.svg" alt="icon: burger" class="header__burger-icon"></button>
+
+        <div class="header__burger">
+          <nav class="header-nav">
+            <ul class="header__menu header-menu">
+              <li class="header__item header-item"><a href="#" class="header-link">Подобрать<br>
+                  квартиру</a></li>
+              <li class="header__item header-item"><a href="#" class="header-link">Забронировать<br>
+                  квартиру</a></li>
+              <li class="header__item header-item"><a href="#" class="header-link">Ход<br>
+                  строительства</a></li>
+              <li class="header__item header-item"><a href="#" class="header-link">Проектная<br>декларация</a></li>
+            </ul>
+          </nav>
+          <div class="header-contacts">
+            <span class="header-text header__text">Закажите звонок:</span>
+            <a class="header-phone" href="tel: ">8 (843) 123-45-67</a>
+          </div>
+
+          <button class="header-menuClose"> ЗАКРЫТЬ <img src="img/close-menu.svg" alt="icon: close menu"
+          class="header__menuClose-icon"></button>
+          
         </div>
         </div>
       </div>
@@ -77,7 +86,7 @@
           <span class="main__counter">02</span>
           <button class="main__btn main__btn-down"><img src="img/arrowDown.svg" alt="image: arrowDown" class="main__arrow-down main__arrow"></button>
         </div>
-        <button class="main__btn-primary">Смотреть кавартиры на этаже</button>
+        <button class="main__btn-primary">Смотреть квартиры на этаже</button>
       </div>
       </main>
   </div>
@@ -93,7 +102,7 @@
       <div class="modal__dialog-image">
         <h3 class="modal__dialog-title">Этаж <span class="modal-counter">02</span></h3>
         
-        <svg width="433" height="408" viewBox="0 0 433 408" fill="none" xmlns="http://www.w3.org/2000/svg"
+        <svg class="modal__dialog-svg" width="100%" height="408" viewBox="0 0 433 408" fill="none" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect width="433" height="408" fill="url(#pattern2)" />
           <defs>

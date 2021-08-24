@@ -13,6 +13,9 @@ $(document).ready(function () {
   const flatPath = $('.modal__path');
   const flatLink = $('.modal__flat-link');
   const floorBtn = $('.main__btn-primary');
+  const openMenu = $('.header-menuOpen');
+  const closeMenu = $('.header-menuClose');
+  const menu = $('.header__burger');
 
 
   // HOVER
@@ -77,5 +80,15 @@ $(document).ready(function () {
     modalDialog.toggleClass('modal__dialog--is-open');
     $('.modal-counter').text(currentFloor);
   });
+
+  // BURGER MENU
+  openMenu.on("click", function () {
+  menu.toggleClass('header__burger--is-open');
+  });
+
+  closeMenu.on("click", function () {
+  menu.toggleClass('header__burger--is-open');
+  });
 });
+
 
